@@ -35,6 +35,12 @@ while Go_again:
                 end_of_game = True
                 print("You lose.")
 
+                Replay = input("Will you like to play again ? 'y' for yes and 'n' for no: ")
+                if Replay == "y":
+                    Go_again = True
+                else:
+                    Go_again = False
+
         print(f"{' '.join(display)}")
 
         if "_" not in display:
@@ -44,8 +50,4 @@ while Go_again:
         from Hangman_art import stages
 
         print(stages[lives])
-        Replay = input("Will you like to play again ? 'y' for yes and 'n' for no: ")
-        if Replay == "y":
-            Go_again = True
-        else:
-            Go_again = False
+
